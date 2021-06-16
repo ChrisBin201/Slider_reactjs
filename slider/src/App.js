@@ -1,25 +1,23 @@
-import logo from './logo.svg';
-import './App.css';
+/** @jsxRuntime classic */
+/**@jsx jsx */  
+import { css,jsx} from "@emotion/react"; 
+import Main from "./Main";
+import Header from "./Components/Header/Header";
+import Body from "./Components/Body/Body";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div css={styles}>
+      <Main>
+        <Header/>
+        <Body/>
+      </Main>
     </div>
   );
 }
 
+const styles = css`
+  display: flex;
+  background-color: #fed4be;
+`;
 export default App;
